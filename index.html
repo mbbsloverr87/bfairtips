@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>BT..FAIR TIPS</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1037140832251732');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow-x:hidden;
+}
+
+/* MAIN MOBILE FRAME */
+
+.page{
+    width:100%;
+    max-width:430px;
+    min-height:100vh;
+    min-height:100dvh;
+    margin:0 auto;
+    padding:28px 16px 25px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        #073452 0%,
+        #031522 32%,
+        #01070b 70%,
+        #000 100%
+    );
+
+    border-left:2px solid #00c8ff;
+    border-right:2px solid #00c8ff;
+
+    box-shadow:
+        0 0 12px #00c8ff,
+        0 0 30px #0077ff,
+        inset 0 0 30px rgba(0,150,255,.18);
+
+    animation:frameGlow 2s ease-in-out infinite alternate;
+    overflow:hidden;
+}
+
+@keyframes frameGlow{
+    from{
+        box-shadow:
+        0 0 10px #00bfff,
+        0 0 25px #0077ff,
+        inset 0 0 20px rgba(0,150,255,.15);
+    }
+
+    to{
+        box-shadow:
+        0 0 18px #00eaff,
+        0 0 45px #008cff,
+        inset 0 0 35px rgba(0,150,255,.25);
+    }
+}
+
+/* PROFILE */
+
+.profile-wrap{
+    width:135px;
+    height:135px;
+    flex-shrink:0;
+    padding:5px;
+    border-radius:50%;
+
+    background:linear-gradient(
+        45deg,
+        #00eaff,
+        #0066ff,
+        #7900ff,
+        #00eaff
+    );
+
+    background-size:300% 300%;
+
+    box-shadow:
+        0 0 12px #00eaff,
+        0 0 30px #0077ff,
+        0 0 50px #0066ff;
+
+    animation:
+        neonRotate 3s linear infinite,
+        profileZoom 2s ease-in-out infinite;
+}
+
+.profile{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #000;
+}
+
+@keyframes neonRotate{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+@keyframes profileZoom{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.07);}
+}
+
+/* BRAND NAME */
+
+.title{
+    width:100%;
+    margin-top:18px;
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:1px;
+    overflow-wrap:anywhere;
+
+    background:linear-gradient(
+        90deg,
+        #00eaff,
+        #ffffff,
+        #00aaff
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    filter:drop-shadow(0 0 10px rgba(0,200,255,.5));
+}
+
+/* IMAGE SLIDER */
+
+.slider-box{
+    width:120px;
+    height:120px;
+    flex-shrink:0;
+    margin-top:18px;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    border:2px solid #00eaff;
+    background:#02070a;
+
+    box-shadow:
+        0 0 10px #00eaff,
+        0 0 25px rgba(0,180,255,.7);
+}
+
+.slider-box img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    object-fit:cover;
+    opacity:0;
+    transform:scale(.35);
+    animation:zoomImage 7.2s infinite;
+}
+
+.slider-box img:nth-child(1){animation-delay:0s;}
+.slider-box img:nth-child(2){animation-delay:2.4s;}
+.slider-box img:nth-child(3){animation-delay:4.8s;}
+
+@keyframes zoomImage{
+    0%{
+        opacity:0;
+        transform:scale(.35);
+    }
+    6%{
+        opacity:1;
+        transform:scale(.75);
+    }
+    15%{
+        opacity:1;
+        transform:scale(1);
+    }
+    25%{
+        opacity:1;
+        transform:scale(1.12);
+    }
+    31%{
+        opacity:0;
+        transform:scale(1.25);
+    }
+    100%{
+        opacity:0;
+        transform:scale(1.25);
+    }
+}
+
+/* CRICKET ANALYSIS */
+
+.analysis{
+    width:100%;
+    margin-top:18px;
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:.5px;
+
+    text-shadow:
+        0 0 8px #00eaff,
+        0 0 20px #008cff;
+}
+
+.subtitle{
+    width:100%;
+    margin-top:6px;
+    font-size:13px;
+    line-height:1.6;
+    color:#a9dfff;
+}
+
+/* TELEGRAM BUTTON */
+
+.telegram-btn{
+    width:88%;
+    max-width:320px;
+    margin-top:20px;
+    padding:15px 20px;
+    border-radius:50px;
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    font-weight:900;
+
+    background:linear-gradient(
+        90deg,
+        #0077cc,
+        #00bfff,
+        #0077ff
+    );
+
+    box-shadow:
+        0 0 12px #00bfff,
+        0 0 30px rgba(0,180,255,.65);
+
+    transition:transform .25s;
+}
+
+.telegram-btn:active{
+    transform:scale(.97);
+}
+
+/* IMPORTANT INFORMATION */
+
+.points{
+    width:94%;
+    margin-top:20px;
+    padding:14px 13px;
+    border-radius:15px;
+
+    background:rgba(0,80,130,.13);
+    border:1px solid rgba(0,190,255,.45);
+
+    box-shadow:
+        inset 0 0 15px rgba(0,150,255,.08);
+}
+
+.points-title{
+    font-size:15px;
+    font-weight:900;
+    color:#00eaff;
+    margin-bottom:9px;
+}
+
+.points p{
+    font-size:11.5px;
+    line-height:1.7;
+    color:#c9e9f7;
+    text-align:left;
+    margin:6px 0;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:18px;
+    padding-bottom:5px;
+    font-size:10px;
+    line-height:1.6;
+    color:#7195a5;
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:360px){
+    .page{
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    .profile-wrap{
+        width:120px;
+        height:120px;
+    }
+
+    .title{
+        font-size:24px;
+        letter-spacing:.5px;
+    }
+
+    .slider-box{
+        width:110px;
+        height:110px;
+    }
+
+    .analysis{
+        font-size:19px;
+    }
+
+    .points p{
+        font-size:10.5px;
+    }
+}
+
+/* LARGER SCREEN */
+
+@media(min-width:431px){
+    body{
+        padding:12px;
+    }
+
+    .page{
+        border:2px solid #00c8ff;
+        border-radius:24px;
+        min-height:calc(100vh - 24px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Meta Pixel noscript fallback -->
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1037140832251732&ev=PageView&noscript=1"
+alt="">
+</noscript>
+<!-- End Meta Pixel noscript fallback -->
+
+<div class="page">
+
+    <!-- PROFILE IMAGE -->
+    <div class="profile-wrap">
+        <img
+        class="profile"
+        src="https://github.com/h38331627-cloud/SUMIT-SINGHANIYA-/blob/main/BODY.jpg?raw=true"
+        alt="BT..FAIR TIPS"
+        fetchpriority="high">
+    </div>
+
+    <!-- BRAND NAME -->
+    <div class="title">
+        BT..FAIR TIPS
+    </div>
+
+    <!-- IMAGE BOX -->
+    <div class="slider-box">
+
+        <img
+        src="https://github.com/h38331627-cloud/SUMIT-SINGHANIYA-/blob/main/BODY.jpg?raw=true"
+        alt="Cricket"
+        loading="lazy">
+
+        <img
+        src="https://github.com/h38331627-cloud/Riya-cricket-tips/blob/main/CPL-Caribbean-Premier-League.webp?raw=true"
+        alt="CPL Cricket"
+        loading="lazy">
+
+        <img
+        src="https://github.com/h38331627-cloud/Riya-cricket-tips/blob/main/images.jpg?raw=true"
+        alt="Cricket Updates"
+        loading="lazy">
+
+    </div>
+
+    <!-- ANALYSIS -->
+    <div class="analysis">
+        🏏 CRICKET ANALYSIS
+    </div>
+
+    <div class="subtitle">
+        Match Analysis • Cricket Updates • Sports Insights
+    </div>
+
+    <!-- TELEGRAM BUTTON -->
+    <a
+    class="telegram-btn"
+    href="https://t.me/+zYoyeOB1PiFmNGNl"
+    target="_blank"
+    rel="noopener noreferrer">
+
+        ✈️ JOIN TELEGRAM
+
+    </a>
+
+    <!-- IMPORTANT INFORMATION -->
+    <div class="points">
+
+        <div class="points-title">
+            ⚠️ IMPORTANT INFORMATION
+        </div>
+
+        <p>
+            • यह प्लेटफॉर्म सामान्य क्रिकेट analysis,
+            information और sports insights के लिए है।
+        </p>
+
+        <p>
+            • सभी analysis उपलब्ध जानकारी और statistical
+            observations पर आधारित होते हैं।
+        </p>
+
+        <p>
+            • किसी भी मैच के परिणाम की guarantee या निश्चित
+            prediction का दावा नहीं किया जाता।
+        </p>
+
+        <p>
+            • Cricket match के परिणाम कई परिस्थितियों पर
+            निर्भर करते हैं और बदल सकते हैं।
+        </p>
+
+        <p>
+            • किसी भी financial decision से पहले स्वयं उचित
+            जानकारी और सलाह प्राप्त करें।
+        </p>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 BT..FAIR TIPS • Sports Analysis & Updates
+    </div>
+
+</div>
+
+</body>
+</html>
